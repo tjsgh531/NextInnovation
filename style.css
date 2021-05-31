@@ -1,0 +1,60 @@
+html,body{
+    margin: 0;
+
+    overflow: hidden;
+}
+/* 버튼초기화 */
+button{
+    background: inherit ; 
+    border:none; 
+    box-shadow:none; 
+    border-radius:0; 
+    padding:0; 
+    overflow:visible; 
+    cursor:pointer;
+}
+
+.wrap{
+    position: relative;
+    height: 100vw;
+}
+header{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    color: white;
+}
+#logo{
+    padding: 10px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    flex-basis: 200px;
+
+    font-size: 32px;
+}
+.gnb{
+    display: flex;
+    flex-direction: row;
+}
+.gnb_btn{
+    width: fit-content;
+    padding: 10px 24px 10px 0;
+    color: white; 
+}
+main{
+    position: absolute;
+    left: 0; top: 0;
+}
+.background_img > img{
+    position: relative;
+    height: 100vw;
+    width: 100vw;
+
+    z-index: -10;
+}
+
+.move_page{
+
+    right: 10px;
+    top:50%; transform: translateY(-50%);
+}
