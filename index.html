@@ -6,6 +6,9 @@
         <meta http-equiv="x-ua-compatible" content="IE=edge">
         <meta name="format-detection" content="telephone=no">
 
+        <!--font-family: 'Baloo Tammudu 2', cursive; -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
         <script src="./main.js" type="text/javascript" defer></script>
     </head>
@@ -13,13 +16,32 @@
         <div class="wrap">
             <header>
                 <div class="logo"><span>nextinnovation</span></div>
-                <nav class="gnb">
-                    <button class="gnb_btn">nextinnovation</button>
-                    <button class="gnb_btn">business</button>
-                    <button class="gnb_btn">work</button>
-                    <button class="gnb_btn">career</button>
-                    <button class="gnb_btn">contact</button>
-                </nav>
+                <div class="gnb">
+                    <button class="gnb_btn">
+                        nextinnovation
+                        <div class="underLine"></div>
+                    </button>
+                    <button class="gnb_btn">
+                        business
+                        <div class="underLine"></div>
+                    </button>
+                    <button class="gnb_btn">
+                        work
+                        <div class="underLine"></div>
+                    </button>
+                    <button class="gnb_btn" id="career">
+                        career
+                        <div class="underLine"></div>
+                        <ul class="sub_menu">
+                            <li>채용공고</li>
+                            <li>채용안내</li>
+                        </ul>
+                    </button>
+                    <button class="gnb_btn">
+                        contact
+                        <div class="underLine"></div>
+                    </button>
+                </div>
             </header>
             <main class="content">
                 <div class="page">
