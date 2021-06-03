@@ -2,6 +2,8 @@ let pageNum = 0
 const maxPage = 2;
 const minPage = 0;
 
+const text = document.querySelectorAll(".title_content");
+
 const downBtn = document.querySelectorAll(".down");
 downBtn.forEach(element => {
     element.addEventListener('click',()=>{
@@ -23,6 +25,7 @@ upBtn.forEach(element => {
         }
         timmer = 0;
         pageNum--;
+
         let moveVal = pageNum * 100 * -1;
         document.querySelector(".content").style.transform = `translateY(${moveVal}vh)`;
     });    
@@ -30,13 +33,13 @@ upBtn.forEach(element => {
 
 let timmer = 0;
 
-setInterval(()=>{
-    timmer += 500;
+// setInterval(()=>{
+//     timmer += 500;
 
-    if(timmer > 5000){
-        autoScroll();
-    }
-},500);
+//     if(timmer > 5000){
+//         autoScroll();
+//     }
+// },500);
 
 function autoScroll(){
     if(pageNum == maxPage){
@@ -48,4 +51,9 @@ function autoScroll(){
     timmer = 0;
     let moveVal = pageNum * 100 * -1;
     document.querySelector(".content").style.transform = `translateY(${moveVal}vh)`;
+}
+
+function floatText(focuspage){
+    const focus = focuspage;
+    
 }
