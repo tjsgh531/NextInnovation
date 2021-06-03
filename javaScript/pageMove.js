@@ -12,6 +12,7 @@ downBtn.forEach(element => {
         }
         timmer = 0;
         pageNum++;
+        floatText(pageNum);
         let moveVal = pageNum * 100 * -1;
         document.querySelector(".content").style.transform = `translateY(${moveVal}vh)`;
     });
@@ -25,7 +26,7 @@ upBtn.forEach(element => {
         }
         timmer = 0;
         pageNum--;
-
+        floatText(pageNum);
         let moveVal = pageNum * 100 * -1;
         document.querySelector(".content").style.transform = `translateY(${moveVal}vh)`;
     });    
@@ -33,13 +34,13 @@ upBtn.forEach(element => {
 
 let timmer = 0;
 
-// setInterval(()=>{
-//     timmer += 500;
+setInterval(()=>{
+    timmer += 500;
 
-//     if(timmer > 5000){
-//         autoScroll();
-//     }
-// },500);
+    if(timmer > 5000){
+        autoScroll();
+    }
+},500);
 
 function autoScroll(){
     if(pageNum == maxPage){
@@ -48,12 +49,15 @@ function autoScroll(){
     else{
         pageNum++;
     }
+    floatText(pageNum);
     timmer = 0;
     let moveVal = pageNum * 100 * -1;
     document.querySelector(".content").style.transform = `translateY(${moveVal}vh)`;
 }
 
-function floatText(focuspage){
-    const focus = focuspage;
-    
+function floatText(focus){
+    text.forEach(element => {
+        element.classList.toggle('focus',false);
+    });
+    text[focus].classList.toggle('focus',true);
 }
