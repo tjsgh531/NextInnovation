@@ -28,20 +28,16 @@
 .main_content{
     position: absolute;
     left: 50%; top: 50%;
-    transform: translate(-50%,-40%);
+    transform: translate(-50%,-50%);
     z-index: 10;
 
-    width: 50%; 
-    height: 50%;
-} 
-.content_wrap{
-    position: relative;
+    width: fit-content
 }
 .title_content{
-    position: absolute;
+    width: fit-content;
 
     color: white;
-    font-size: 42px;
+    font-size: 4rem;
     white-space: nowrap;
 
     opacity: 0;
@@ -50,7 +46,7 @@
     transition: 1.5s all ease-in-out;
 }
 .sub_content{
-    font-size: 16px;
+    font-size: 1.2rem;
 }
 #last_content{
 
@@ -75,7 +71,7 @@
     z-index: 10;
 
     color: white;
-    font-size: 14px;
+    font-size: 1.2rem;
     letter-spacing: 1px;
     font-weight: 900;
     font-family: 'Baloo Tammudu 2', cursive;
@@ -101,7 +97,20 @@
     background-color: white;
     border: 3px solid black;
 
-    padding: 0 5px;
+    padding: 0.2rem 0.6rem;
     font-size: 24px;
     font-weight: 900;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer_text{
+    position: absolute;
+    bottom: 5rem; left: 5rem;
+
+    font-size: 1rem;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: white;
 }
